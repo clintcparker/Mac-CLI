@@ -16,7 +16,7 @@ main() {
     echo " Mac CLI Installer"
     echo "================================================${NC}\n"
 
-    git clone https://github.com/guarinogabriel/mac-cli.git --depth 1 && cd mac-cli
+    git clone https://github.com/clintcparker/mac-cli.git --depth 1 && cd mac-cli
 
     echo "${LIGHTGREEN}Please enter path to mysql on your local machine:"
     echo "${NC}Press enter without any value to keep default: /Applications/MAMP/Library/bin/mysql"
@@ -87,6 +87,12 @@ main() {
         echo "${GREEN}/usr/bin/ruby -e '\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'\n${NC}"
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
+
+    if [ ! -f /usr/local/bin/fish ]; then
+        echo "Installing fish..."
+        echo "${GREEN}brew install fish\n${NC}"
+        brew install fish
+     fi
 
     if [ ! -f /usr/local/bin/git ]; then
         echo "Installing Git..."
