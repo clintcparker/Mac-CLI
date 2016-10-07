@@ -92,7 +92,7 @@ main() {
         echo "Installing fish..."
         echo "${GREEN}brew install fish\n${NC}"
         brew install fish
-  fi
+    fi
 
     if [ ! -f /usr/local/bin/git ]; then
         echo "Installing Git..."
